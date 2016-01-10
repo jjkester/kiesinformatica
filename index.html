@@ -387,6 +387,24 @@
       var codesDown = [34, 40]; // The keys for navigating to next slides
       var scrollSpeedFactor = 1;
 
+      // Scroll function, animates scrolling to a given element.
+      function scrollTo (element, push_history) {
+        // Calculate things
+        var scrollPosition = element.offset().top;
+        var scrollDistance = Math.abs($(window).scrollTop() - scrollPosition);
+        var scrollDuration = scrollDistance * scrollSpeedFactor;
+
+        // Animate
+        $('html, body').animate({
+          scrollTop: scrollPosition
+        }, scrollDuration);
+
+        // Set history
+        if (push_history && element.attr('id') != undefined) {
+          history.pushState({slide_id: element.attr('id')}, '', '#' + element.attr('id'));
+        }
+      }
+
       // Key navigation
       $(document).keydown(function (event) {
         var scrollSlide = null;
@@ -417,21 +435,10 @@
           }
         }
 
-        // Calculate things
-        var scrollPosition = scrollSlide.offset().top;
-        var scrollDistance = Math.abs($(window).scrollTop() - scrollPosition);
-        var scrollDuration = scrollDistance * scrollSpeedFactor;
-
         // Animate scroll
-        if (scrollPosition != null) {
-          $('html, body').animate({
-            scrollTop: scrollPosition
-          }, scrollDuration);
-
-          // Add to history
-          if (scrollSlide.attr('id') != undefined) {
-            history.pushState({}, '', '#' + scrollSlide.attr('id'));
-          }
+        if (scrollSlide != null) {
+          // Scroll
+          scrollTo(scrollSlide, true);
         }
       });
 
@@ -439,19 +446,16 @@
       $('a[href^="#"]').click(function (event) {
         event.preventDefault();
 
-        // Calculate things
-        var scrollPosition = $($(this).attr('href')).offset().top;
-        var scrollDistance = Math.abs($(window).scrollTop() - scrollPosition);
-        var scrollDuration = scrollDistance / scrollSpeedFactor;
-
         // Scroll
-        $('html, body').animate({
-          scrollTop: scrollPosition
-        }, scrollDuration);
-
-        // Add to history
-        history.pushState({}, '', $(this).attr('href'));
+        scrollTo($($(this).attr('href')), true);
       });
+
+      // Handle local history changes with scrolling
+      window.onpopstate = function (event) {
+        if (event.state != undefined && event.state.slide_id != undefined) {
+          scrollTo($('#' + event.state.slide_id), false);
+        }
+      };
     });
 
     // Enable tooltips
