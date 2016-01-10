@@ -1,0 +1,170 @@
+/*!
+ * Bootstrap v3.3.6 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+// Core variables and mixins
+@import "variables.less";
+@import "mixins.less";
+
+// Reset and dependencies
+@import "normalize.less";
+@import "print.less";
+@import "glyphicons.less";
+
+// Core CSS
+@import "scaffolding.less";
+@import "type.less";
+@import "code.less";
+@import "grid.less";
+@import "tables.less";
+@import "forms.less";
+@import "buttons.less";
+
+// Components
+@import "component-animations.less";
+@import "dropdowns.less";
+@import "button-groups.less";
+@import "input-groups.less";
+@import "navs.less";
+@import "navbar.less";
+@import "breadcrumbs.less";
+@import "pagination.less";
+@import "pager.less";
+@import "labels.less";
+@import "badges.less";
+@import "jumbotron.less";
+@import "thumbnails.less";
+@import "alerts.less";
+@import "progress-bars.less";
+@import "media.less";
+@import "list-group.less";
+@import "panels.less";
+@import "responsive-embed.less";
+@import "wells.less";
+@import "close.less";
+
+// Components w/ JavaScript
+@import "modals.less";
+@import "tooltip.less";
+@import "popovers.less";
+@import "carousel.less";
+
+// Utility classes
+@import "utilities.less";
+@import "responsive-utilities.less";
+
+
+.color-block {
+  display: block;
+  position: relative;
+  width: 100%;
+
+  @font-size-scaler: 1.5;
+
+  h1, h2 {
+    font-family: @font-family-serif;
+  }
+
+  &.color-block-large {
+    display: table;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    padding: (@navbar-height + @padding-large-vertical * 4) 0 (@padding-large-vertical * 4) 0;
+
+    > .color-block-body {
+      display: table-cell;
+      height: 100%;
+      vertical-align: middle;
+    }
+
+    h1 {
+      font-size: @font-size-h1 * @font-size-scaler;
+      margin-bottom: @font-size-base * @font-size-scaler;
+      small {
+        color: inherit;
+        opacity: .7;
+      }
+    }
+    h2 {
+      font-size: @font-size-h2 * @font-size-scaler;
+      margin-bottom: @font-size-base * @font-size-scaler;
+    }
+    .lead {
+      font-size: @font-size-large * @font-size-scaler;
+    }
+  }
+
+  &.color-block-primary {
+    background-color: @brand-primary;
+    .color-block-content {
+      color: #fff;
+    }
+    hr {
+      border-color: mix(@brand-primary, #fff);
+    }
+  }
+  &.color-block-info {
+    background-color: @brand-info;
+    .color-block-content {
+      color: #fff;
+    }
+    hr {
+      border-color: mix(@brand-info, #fff);
+    }
+  }
+  &.color-block-success {
+    background-color: @brand-success;
+    .color-block-content {
+      color: #fff;
+    }
+    hr {
+      border-color: mix(@brand-success, #fff);
+    }
+  }
+  &.color-block-warning {
+    background-color: @brand-warning;
+    .color-block-content {
+      color: #fff;
+    }
+    hr {
+      border-color: mix(@brand-warning, #fff);
+    }
+  }
+  &.color-block-danger {
+    background-color: @brand-danger;
+    .color-block-content {
+      color: #fff;
+    }
+    hr {
+      border-color: mix(@brand-danger, #fff);
+    }
+  }
+  &.color-block-light {
+    background-color: @gray-lighter;
+  }
+  &.color-block-white {
+    background-color: #fff;
+    .color-block-content {
+      color: @gray-light;
+      h1, h2 {
+        color: @brand-primary;
+      }
+    }
+  }
+  &.color-block-dark {
+    background-color: @gray-dark;
+    .color-block-content {
+      color: #fff;
+    }
+    hr {
+      border-color: mix(@gray-dark, #fff);
+    }
+  }
+
+  hr.spacer {
+    border-color: transparent;
+  }
+}
