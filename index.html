@@ -21,7 +21,7 @@
     }
   </style>
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar-collapse">
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -30,19 +30,53 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand">
+        <div class="navbar-brand">
           Kies Informatica
-        </a>
+        </div>
       </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li><a href="">Nav item</a></li>
+          <li data-toggle="tooltip" data-placement="bottom" title="Terug naar het begin">
+            <a href="#home">
+              <i class="fa fa-fw fa-home"></i>
+            </a>
+          </li>
+          <li data-toggle="tooltip" data-placement="bottom" title="Video: Wat de meeste scholen niet geven">
+            <a href="#film">
+              <i class="fa fa-fw fa-film"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#waarom-informatica">
+              Waarom?
+            </a>
+          </li>
+          <li>
+            <a href="#informatica-op-het-vo">
+              Vakinformatie
+            </a>
+          </li>
+          <li>
+            <a href="#onderwerpen-en-opdrachten">
+              Vakinhoud
+            </a>
+          </li>
+          <li>
+            <a href="#praktische-informatie">
+              Praktische informatie
+            </a>
+          </li>
+          <li>
+            <a href="#na-de-middelbare-school">
+              Vervolg
+            </a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
   <div class="content-wrapper">
-    <div class="color-block color-block-large color-block-dark color-block-cover">
+    <div id="home" class="color-block color-block-large color-block-dark color-block-cover">
       <div class="color-block-body">
         <div class="color-block-content">
           <div class="container">
@@ -54,7 +88,7 @@
       </div>
     </div>
 
-    <div class="color-block color-block-large color-block-dark">
+    <div id="film" class="color-block color-block-large color-block-dark">
       <div class="color-block-body">
         <div class="container text-center">
           <div class="color-block-content">
@@ -70,7 +104,7 @@
       </div>
     </div>
 
-    <div class="color-block color-block-large color-block-info">
+    <div id="waarom-informatica" class="color-block color-block-large color-block-info">
       <div class="color-block-body">
         <div class="container text-center">
           <div class="color-block-content">
@@ -87,7 +121,7 @@
                 <h3>Praktische insteek</h3>
               </div>
               <div class="col-md-4">
-                <h3>Informatica is leuk</h3
+                <h3>Informatica is leuk</h3>
                 <p></p>
               </div>
             </div>
@@ -95,7 +129,8 @@
         </div>
       </div>
     </div>
-    <div class="color-block color-block-large color-block-light">
+
+    <div id="informatica-op-het-vo" class="color-block color-block-large color-block-light">
       <div class="color-block-body">
         <div class="container text-center">
           <div class="color-block-content">
@@ -127,7 +162,8 @@
         </div>
       </div>
     </div>
-    <div class="color-block color-block-large color-block-success">
+
+    <div id="onderwerpen-en-opdrachten" class="color-block color-block-large color-block-success">
       <div class="color-block-body">
         <div class="container text-center">
           <div class="color-block-content">
@@ -169,11 +205,13 @@
         </div>
       </div>
     </div>
-    <div class="color-block color-block-large color-block-dark">
+
+    <div id="praktische-informatie" class="color-block color-block-large color-block-dark">
       <div class="color-block-body">
       </div>
     </div>
-    <div class="color-block color-block-large color-block-warning">
+
+    <div id="na-de-middelbare-school" class="color-block color-block-large color-block-warning">
       <div class="color-block-body">
         <div class="container text-center">
           <div class="color-block-content">
@@ -187,44 +225,83 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="static/js/bootstrap.min.js"></script>
   <script>
-    (function() {
-      var slides = $('.content-wrapper').children('.color-block-large').toArray();
-      var codesUp = [33, 38];
-      var codesDown = [34, 40];
+    $(function() {
+      var slides = $('.content-wrapper').children('.color-block-large').toArray(); // The slides in the page
+      var codesUp = [33, 38]; // The keys for navigating to previous slides
+      var codesDown = [34, 40]; // The keys for navigating to next slides
+      var scrollSpeedFactor = 1;
 
-      $(document).keydown(function(event) {
-        var scrollPosition = null;
+      // Key navigation
+      $(document).keydown(function (event) {
+        var scrollSlide = null;
 
+        // Move up
         if (codesUp.indexOf(event.which) >= 0) {
           event.preventDefault();
 
           for (var i = slides.length - 1; i >= 0; i--) {
             var slide = $(slides[i]);
             if (slide.offset().top < $(window).scrollTop()) {
-              scrollPosition = slide.offset().top;
+              scrollSlide = slide;
               break;
             }
           }
         }
+
+        // Move down
         if (codesDown.indexOf(event.which) >= 0) {
           event.preventDefault();
 
           for (var i = 0; i < slides.length; i++) {
             var slide = $(slides[i]);
-            if (slide.offset().top >= $(window).scrollTop() + $(window).height()) {
-              scrollPosition = slide.offset().top;
+            if (slide.offset().top > $(window).scrollTop()) {
+              scrollSlide = slide;
               break;
             }
           }
         }
 
+        // Calculate things
+        var scrollPosition = scrollSlide.offset().top;
+        var scrollDistance = Math.abs($(window).scrollTop() - scrollPosition);
+        var scrollDuration = scrollDistance * scrollSpeedFactor;
+
+        // Animate scroll
         if (scrollPosition != null) {
           $('html, body').animate({
             scrollTop: scrollPosition
-          }, 2000);
+          }, scrollDuration);
+
+          // Add to history
+          if (scrollSlide.attr('id') != undefined) {
+            history.pushState({}, '', '#' + scrollSlide.attr('id'));
+          }
         }
       });
-    })();
+
+      // Scroll to anchors
+      $('a[href^="#"]').click(function (event) {
+        event.preventDefault();
+
+        // Calculate things
+        var scrollPosition = $($(this).attr('href')).offset().top;
+        var scrollDistance = Math.abs($(window).scrollTop() - scrollPosition);
+        var scrollDuration = scrollDistance / scrollSpeedFactor;
+
+        // Scroll
+        $('html, body').animate({
+          scrollTop: scrollPosition
+        }, scrollDuration);
+
+        // Add to history
+        history.pushState({}, '', $(this).attr('href'));
+      });
+    });
+
+    // Enable tooltips
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    });
   </script>
 </body>
 </html>
