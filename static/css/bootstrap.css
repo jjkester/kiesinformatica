@@ -6725,6 +6725,10 @@ button.close {
     display: none !important;
   }
 }
+.content-wrapper {
+  height: 100%;
+  min-height: 100%;
+}
 .color-block {
   display: block;
   position: relative;
