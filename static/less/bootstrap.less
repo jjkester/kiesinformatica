@@ -184,3 +184,15 @@
     background: fadeout(@gray-dark, 50%);
   }
 }
+
+.visible-presentation {
+  display: none;
+  .presentation & {
+    display: block;
+  }
+}
+.hidden-presentation {
+  .presentation & {
+    display: none;
+  }
+}
