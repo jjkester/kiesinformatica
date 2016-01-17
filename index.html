@@ -16,7 +16,7 @@
       min-height: 100%;
     }
     .color-block-cover {
-      background: url('static/img/marketing_bg.jpg');
+      background: url('static/img/marketing_bg.jpg') center;
       background-size: cover;
     }
     .color-block-cover .jumbotron {
@@ -457,6 +457,12 @@
           </div>
         </div>
       </div>
+      <div style="position: absolute; bottom: 1em; right: 1em; text-align: right;">
+        <p class="text-muted">
+          Opmaak en tekst: &copy; <a href="https://github.com/TheMSB">Martijn Bruning</a> en <a href="https://github.com/jjkester">Jan-Jelle Kester</a><br>
+          Afbeelding: <a href="https://www.flickr.com/photos/chattlibrary/11408257855">&copy; Chattanooga Public Library <small>(CC BY-NC-ND 2.0)</small></a>
+        </p>
+      </div>
     </div>
   </div>
 
@@ -468,6 +474,24 @@
       var codesUp = [33, 38]; // The keys for navigating to previous slides
       var codesDown = [34, 40]; // The keys for navigating to next slides
       var scrollSpeedFactor = 1;
+
+      // Scroll function, animates scrolling to a given element.
+      function scrollTo (element, push_history) {
+        // Calculate things
+        var scrollPosition = element.offset().top;
+        var scrollDistance = Math.abs($(window).scrollTop() - scrollPosition);
+        var scrollDuration = scrollDistance * scrollSpeedFactor;
+
+        // Animate
+        $('html, body').animate({
+          scrollTop: scrollPosition
+        }, scrollDuration);
+
+        // Set history
+        if (push_history && element.attr('id') != undefined) {
+          history.pushState({slide_id: element.attr('id')}, '', '#' + element.attr('id'));
+        }
+      }
 
       // Key navigation
       $(document).keydown(function (event) {
@@ -499,21 +523,10 @@
           }
         }
 
-        // Calculate things
-        var scrollPosition = scrollSlide.offset().top;
-        var scrollDistance = Math.abs($(window).scrollTop() - scrollPosition);
-        var scrollDuration = scrollDistance * scrollSpeedFactor;
-
         // Animate scroll
-        if (scrollPosition != null) {
-          $('html, body').animate({
-            scrollTop: scrollPosition
-          }, scrollDuration);
-
-          // Add to history
-          if (scrollSlide.attr('id') != undefined) {
-            history.pushState({}, '', '#' + scrollSlide.attr('id'));
-          }
+        if (scrollSlide != null) {
+          // Scroll
+          scrollTo(scrollSlide, true);
         }
       });
 
@@ -521,19 +534,16 @@
       $('a[href^="#"]').click(function (event) {
         event.preventDefault();
 
-        // Calculate things
-        var scrollPosition = $($(this).attr('href')).offset().top;
-        var scrollDistance = Math.abs($(window).scrollTop() - scrollPosition);
-        var scrollDuration = scrollDistance / scrollSpeedFactor;
-
         // Scroll
-        $('html, body').animate({
-          scrollTop: scrollPosition
-        }, scrollDuration);
-
-        // Add to history
-        history.pushState({}, '', $(this).attr('href'));
+        scrollTo($($(this).attr('href')), true);
       });
+
+      // Handle local history changes with scrolling
+      window.onpopstate = function (event) {
+        if (event.state != undefined && event.state.slide_id != undefined) {
+          scrollTo($('#' + event.state.slide_id), false);
+        }
+      };
     });
 
     // Enable tooltips
