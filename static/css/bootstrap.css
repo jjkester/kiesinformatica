@@ -6854,3 +6854,13 @@ button.close {
 .presentation .hidden-presentation {
   display: none;
 }
+.text-presentation {
+  font-size: 18px;
+  line-height: 1.75;
+  opacity: 0.8;
+}
+.list-presentation {
+  font-size: 18px;
+  line-height: 1.75;
+  opacity: 0.8;
+}
