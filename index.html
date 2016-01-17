@@ -75,6 +75,13 @@
             </a>
           </li>
         </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <button class="btn btn-default navbar-btn presentation-toggle">
+              <i class="fa fa-film"></i>
+            </button>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
@@ -457,6 +464,19 @@
     // Enable tooltips
     $(function () {
       $('[data-toggle="tooltip"]').tooltip()
+    });
+
+    // Presentation toggle
+    $(function () {
+      $('.presentation-toggle').click(function (event) {
+        if ($(this).hasClass('active')) {
+          $('body').removeClass('presentation');
+          $(this).removeClass('active');
+        } else {
+          $('body').addClass('presentation');
+          $(this).addClass('active');
+        }
+      });
     });
   </script>
 </body>
