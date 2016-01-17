@@ -16,7 +16,7 @@
       min-height: 100%;
     }
     .color-block-cover {
-      background: url('static/img/marketing_bg.jpg');
+      background: url('static/img/marketing_bg.jpg') center;
       background-size: cover;
     }
     .color-block-cover .jumbotron {
@@ -49,6 +49,12 @@
               <i class="fa fa-fw fa-film"></i>
             </a>
           </li>
+          <li>
+            <a href="#informatica-is">
+              Informatica is...
+            </a>
+          </li>
+          <li>
           <li data-toggle="tooltip" data-placement="bottom" title="Waarom informatica?">
             <a href="#waarom-informatica">
               <i class="fa fa-fw fa-question"></i>
@@ -80,6 +86,13 @@
             </a>
           </li>
         </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <button class="btn btn-default navbar-btn presentation-toggle">
+              <i class="fa fa-film"></i>
+            </button>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
@@ -105,6 +118,76 @@
             </h1>
             <div class="embed-responsive embed-responsive-16by9">
               <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="informatica-is" class="color-block color-block-large color-block-danger">
+      <div class="color-block-body">
+        <div class="container text-center">
+          <div class="color-block-content">
+            <h1>
+              Informatica is...
+            </h1>
+            <blockquote class="well">
+              <p>&ldquo;Informatica is de studie en de wetenschap van de theoretische fundamenten van informatie en het rekenen, de theoretische informatica, en de implementatie en toepassing in computersystemen.&rdquo;</p>
+            </blockquote>
+            <hr class="spacer hidden-sm">
+            <hr class="spacer">
+            <div class="row">
+              <div class="col-md-4">
+                <p class="h1"><i class="fa fa-hand-pointer-o"></i></p>
+                <h3>Computertoepassingen gebruiken</h3>
+                <p>Bijvoorbeeld Word, Excel en PowerPoint</p>
+              </div>
+              <div class="col-md-4">
+                <p class="h1"><i class="fa fa-code"></i></p>
+                <h3>Programmeren</h3>
+                <p>Apps bouwen of een game maken</p>
+              </div>
+              <div class="col-md-4">
+                <p class="h1"><i class="fa fa-table"></i></p>
+                <h3>Informatie structureren</h3>
+                <p>Analytische vaardigheden en databases</p>
+              </div>
+            </div>
+            <hr class="spacer hidden-sm">
+            <div class="row">
+              <div class="col-md-4">
+                <p class="h1"><i class="fa fa-laptop"></i></p>
+                <h3>Hardware</h3>
+                <p>Hoe werkt een computer?</p>
+              </div>
+              <div class="col-md-4">
+                <p class="h1"><i class="fa fa-balance-scale"></i></p>
+                <h3>Kunstmatige intelligentie</h3>
+                <p>Laat een computer beslissingen voor je maken</p>
+              </div>
+              <div class="col-md-4">
+                <p class="h1"><i class="fa fa-paint-brush"></i></p>
+                <h3>Kunst</h3>
+                <p>Photoshop en videobewerken</p>
+              </div>
+            </div>
+            <hr class="spacer hidden-sm">
+            <div class="row">
+              <div class="col-md-4">
+                <p class="h1"><i class="fa fa-send"></i></p>
+                <h3>Communicatie</h3>
+                <p>Berichten over het internet</p>
+              </div>
+              <div class="col-md-4">
+                <p class="h1"><i class="fa fa-user-secret"></i></p>
+                <h3>Privacy en veiligheid</h3>
+                <p>Veilig internetgebruik en cryptografie</p>
+              </div>
+              <div class="col-md-4">
+                <p class="h1"><i class="fa fa-rocket"></i></p>
+                <h3>Modern en snel</h3>
+                <p>Een vak met veel nieuwe ontwikkelingen</p>
+              </div>
             </div>
           </div>
         </div>
@@ -380,6 +463,12 @@
           </div>
         </div>
       </div>
+      <div style="position: absolute; bottom: 1em; right: 1em; text-align: right;">
+        <p class="text-muted">
+          Opmaak en tekst: &copy; <a href="https://github.com/TheMSB">Martijn Bruning</a> en <a href="https://github.com/jjkester">Jan-Jelle Kester</a><br>
+          Afbeelding: <a href="https://www.flickr.com/photos/chattlibrary/11408257855">&copy; Chattanooga Public Library <small>(CC BY-NC-ND 2.0)</small></a>
+        </p>
+      </div>
     </div>
   </div>
 
@@ -391,6 +480,24 @@
       var codesUp = [33, 38]; // The keys for navigating to previous slides
       var codesDown = [34, 40]; // The keys for navigating to next slides
       var scrollSpeedFactor = 1;
+
+      // Scroll function, animates scrolling to a given element.
+      function scrollTo (element, push_history) {
+        // Calculate things
+        var scrollPosition = element.offset().top;
+        var scrollDistance = Math.abs($(window).scrollTop() - scrollPosition);
+        var scrollDuration = scrollDistance * scrollSpeedFactor;
+
+        // Animate
+        $('html, body').animate({
+          scrollTop: scrollPosition
+        }, scrollDuration);
+
+        // Set history
+        if (push_history && element.attr('id') != undefined) {
+          history.pushState({slide_id: element.attr('id')}, '', '#' + element.attr('id'));
+        }
+      }
 
       // Key navigation
       $(document).keydown(function (event) {
@@ -422,21 +529,10 @@
           }
         }
 
-        // Calculate things
-        var scrollPosition = scrollSlide.offset().top;
-        var scrollDistance = Math.abs($(window).scrollTop() - scrollPosition);
-        var scrollDuration = scrollDistance * scrollSpeedFactor;
-
         // Animate scroll
-        if (scrollPosition != null) {
-          $('html, body').animate({
-            scrollTop: scrollPosition
-          }, scrollDuration);
-
-          // Add to history
-          if (scrollSlide.attr('id') != undefined) {
-            history.pushState({}, '', '#' + scrollSlide.attr('id'));
-          }
+        if (scrollSlide != null) {
+          // Scroll
+          scrollTo(scrollSlide, true);
         }
       });
 
@@ -444,24 +540,34 @@
       $('a[href^="#"]').click(function (event) {
         event.preventDefault();
 
-        // Calculate things
-        var scrollPosition = $($(this).attr('href')).offset().top;
-        var scrollDistance = Math.abs($(window).scrollTop() - scrollPosition);
-        var scrollDuration = scrollDistance / scrollSpeedFactor;
-
         // Scroll
-        $('html, body').animate({
-          scrollTop: scrollPosition
-        }, scrollDuration);
-
-        // Add to history
-        history.pushState({}, '', $(this).attr('href'));
+        scrollTo($($(this).attr('href')), true);
       });
+
+      // Handle local history changes with scrolling
+      window.onpopstate = function (event) {
+        if (event.state != undefined && event.state.slide_id != undefined) {
+          scrollTo($('#' + event.state.slide_id), false);
+        }
+      };
     });
 
     // Enable tooltips
     $(function () {
       $('[data-toggle="tooltip"]').tooltip()
+    });
+
+    // Presentation toggle
+    $(function () {
+      $('.presentation-toggle').click(function (event) {
+        if ($(this).hasClass('active')) {
+          $('body').removeClass('presentation');
+          $(this).removeClass('active');
+        } else {
+          $('body').addClass('presentation');
+          $(this).addClass('active');
+        }
+      });
     });
   </script>
 </body>
