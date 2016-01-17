@@ -1,474 +1,618 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Kies Informatica</title>
+    <title>Kies Informatica</title>
 
-  <link href="static/css/bootstrap.css" rel="stylesheet">
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic|Pacifico' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <style type="text/css">
-    html, body {
-      height: 100%;
-      min-height: 100%;
-    }
-    .color-block-cover {
-      background: url('static/img/marketing_bg.jpg') center;
-      background-size: cover;
-    }
-    .color-block-cover .jumbotron {
-      color: #fff;
-    }
-  </style>
+    <link href="static/css/bootstrap.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic|Pacifico'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <style type="text/css">
+        html, body {
+        height: 100%;
+        min-height: 100%;
+        }
+        .color-block-cover {
+        background: url('static/img/marketing_bg.jpg') center;
+        background-size: cover;
+        }
+        .color-block-cover .jumbotron {
+        color: #fff;
+        }
+    </style>
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
-  <nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <div class="navbar-brand">
-          Kies Informatica
-        </div>
-      </div>
-      <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li data-toggle="tooltip" data-placement="bottom" title="Terug naar het begin">
-            <a href="#home">
-              <i class="fa fa-fw fa-home"></i>
-            </a>
-          </li>
-          <li data-toggle="tooltip" data-placement="bottom" title="Video: Wat de meeste scholen niet geven">
-            <a href="#film">
-              <i class="fa fa-fw fa-film"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#informatica-is">
-              Informatica is...
-            </a>
-          </li>
-          <li>
-            <a href="#waarom-informatica">
-              Waarom?
-            </a>
-          </li>
-          <li>
-            <a href="#informatica-op-het-vo">
-              Vakinformatie
-            </a>
-          </li>
-          <li>
-            <a href="#onderwerpen-en-opdrachten">
-              Vakinhoud
-            </a>
-          </li>
-          <li>
-            <a href="#praktische-informatie">
-              Praktische informatie
-            </a>
-          </li>
-          <li>
-            <a href="#na-de-middelbare-school">
-              Vervolg
-            </a>
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <button class="btn btn-default navbar-btn presentation-toggle">
-              <i class="fa fa-film"></i>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
             </button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <div class="content-wrapper">
-    <div id="home" class="color-block color-block-large color-block-dark color-block-cover">
-      <div class="color-block-body">
-        <div class="jumbotron text-center">
-          <div class="container">
-            <h1>Informatica is cool</h1>
-            <p>En echt niet alleen voor nerds!</p>
-          </div>
+            <div class="navbar-brand">
+                Kies Informatica
+            </div>
         </div>
-      </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li data-toggle="tooltip" data-placement="bottom" title="Terug naar het begin">
+                    <a href="#home">
+                        <i class="fa fa-fw fa-home"></i>
+                    </a>
+                </li>
+                <li data-toggle="tooltip" data-placement="bottom" title="Video: Wat de meeste scholen niet geven">
+                    <a href="#film">
+                        <i class="fa fa-fw fa-film"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#informatica-is">
+                        Informatica is...
+                    </a>
+                </li>
+                <li>
+                    <a href="#waarom-informatica">
+                        Waarom?
+                    </a>
+                </li>
+                <li>
+                    <a href="#informatica-op-het-vo">
+                        Vakinformatie
+                    </a>
+                </li>
+                <li>
+                    <a href="#onderwerpen-en-opdrachten">
+                        Vakinhoud
+                    </a>
+                </li>
+                <li>
+                    <a href="#praktische-informatie">
+                        Praktische informatie
+                    </a>
+                </li>
+                <li>
+                    <a href="#na-de-middelbare-school">
+                        Vervolg
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <button class="btn btn-default navbar-btn presentation-toggle">
+                        <i class="fa fa-film"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="content-wrapper">
+    <div id="home" class="color-block color-block-large color-block-dark color-block-cover">
+        <div class="color-block-body">
+            <div class="jumbotron text-center">
+                <div class="container">
+                    <h1>Informatica is cool</h1>
+
+                    <p>En echt niet alleen voor nerds!</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="film" class="color-block color-block-large color-block-dark">
-      <div class="color-block-body">
-        <div class="container text-center">
-          <div class="color-block-content">
-            <h1>
-              Informatica<br>
-              <small>Wat de meeste scholen niet geven</small>
-            </h1>
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+        <div class="color-block-body">
+            <div class="container text-center">
+                <div class="color-block-content">
+                    <h1>
+                        Informatica<br>
+                        <small>Wat de meeste scholen niet geven</small>
+                    </h1>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/nKIu9yen5nc"
+                                frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
 
     <div id="informatica-is" class="color-block color-block-large color-block-danger">
-      <div class="color-block-body">
-        <div class="container text-center">
-          <div class="color-block-content">
-            <h1>
-              Informatica is...
-            </h1>
-            <blockquote class="well">
-              <p>&ldquo;Informatica is de studie en de wetenschap van de theoretische fundamenten van informatie en het rekenen, de theoretische informatica, en de implementatie en toepassing in computersystemen.&rdquo;</p>
-            </blockquote>
-            <hr class="spacer hidden-sm">
-            <hr class="spacer">
-            <div class="row">
-              <div class="col-md-4">
-                <p class="h1"><i class="fa fa-hand-pointer-o"></i></p>
-                <h3>Computertoepassingen gebruiken</h3>
-                <p>Bijvoorbeeld Word, Excel en PowerPoint</p>
-              </div>
-              <div class="col-md-4">
-                <p class="h1"><i class="fa fa-code"></i></p>
-                <h3>Programmeren</h3>
-                <p>Apps bouwen of een game maken</p>
-              </div>
-              <div class="col-md-4">
-                <p class="h1"><i class="fa fa-table"></i></p>
-                <h3>Informatie structureren</h3>
-                <p>Analytische vaardigheden en databases</p>
-              </div>
+        <div class="color-block-body">
+            <div class="container text-center">
+                <div class="color-block-content">
+                    <h1>
+                        Informatica is...
+                    </h1>
+                    <blockquote class="well">
+                        <p>&ldquo;Informatica is de studie en de wetenschap van de theoretische fundamenten van
+                            informatie en het rekenen, de theoretische informatica, en de implementatie en toepassing in
+                            computersystemen.&rdquo;</p>
+                    </blockquote>
+                    <hr class="spacer hidden-sm">
+                    <hr class="spacer">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p class="h1"><i class="fa fa-hand-pointer-o"></i></p>
+
+                            <h3>Computertoepassingen gebruiken</h3>
+
+                            <p>Bijvoorbeeld Word, Excel en PowerPoint</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="h1"><i class="fa fa-code"></i></p>
+
+                            <h3>Programmeren</h3>
+
+                            <p>Apps bouwen of een game maken</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="h1"><i class="fa fa-table"></i></p>
+
+                            <h3>Informatie structureren</h3>
+
+                            <p>Analytische vaardigheden en databases</p>
+                        </div>
+                    </div>
+                    <hr class="spacer hidden-sm">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p class="h1"><i class="fa fa-laptop"></i></p>
+
+                            <h3>Hardware</h3>
+
+                            <p>Hoe werkt een computer?</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="h1"><i class="fa fa-balance-scale"></i></p>
+
+                            <h3>Kunstmatige intelligentie</h3>
+
+                            <p>Laat een computer beslissingen voor je maken</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="h1"><i class="fa fa-paint-brush"></i></p>
+
+                            <h3>Kunst</h3>
+
+                            <p>Photoshop en videobewerken</p>
+                        </div>
+                    </div>
+                    <hr class="spacer hidden-sm">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p class="h1"><i class="fa fa-send"></i></p>
+
+                            <h3>Communicatie</h3>
+
+                            <p>Berichten over het internet</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="h1"><i class="fa fa-user-secret"></i></p>
+
+                            <h3>Privacy en veiligheid</h3>
+
+                            <p>Veilig internetgebruik en cryptografie</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="h1"><i class="fa fa-rocket"></i></p>
+
+                            <h3>Modern en snel</h3>
+
+                            <p>Een vak met veel nieuwe ontwikkelingen</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <hr class="spacer hidden-sm">
-            <div class="row">
-              <div class="col-md-4">
-                <p class="h1"><i class="fa fa-laptop"></i></p>
-                <h3>Hardware</h3>
-                <p>Hoe werkt een computer?</p>
-              </div>
-              <div class="col-md-4">
-                <p class="h1"><i class="fa fa-balance-scale"></i></p>
-                <h3>Kunstmatige intelligentie</h3>
-                <p>Laat een computer beslissingen voor je maken</p>
-              </div>
-              <div class="col-md-4">
-                <p class="h1"><i class="fa fa-paint-brush"></i></p>
-                <h3>Kunst</h3>
-                <p>Photoshop en videobewerken</p>
-              </div>
-            </div>
-            <hr class="spacer hidden-sm">
-            <div class="row">
-              <div class="col-md-4">
-                <p class="h1"><i class="fa fa-send"></i></p>
-                <h3>Communicatie</h3>
-                <p>Berichten over het internet</p>
-              </div>
-              <div class="col-md-4">
-                <p class="h1"><i class="fa fa-user-secret"></i></p>
-                <h3>Privacy en veiligheid</h3>
-                <p>Veilig internetgebruik en cryptografie</p>
-              </div>
-              <div class="col-md-4">
-                <p class="h1"><i class="fa fa-rocket"></i></p>
-                <h3>Modern en snel</h3>
-                <p>Een vak met veel nieuwe ontwikkelingen</p>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
 
     <div id="waarom-informatica" class="color-block color-block-large color-block-info">
-      <div class="color-block-body">
-        <div class="container text-center">
-          <div class="color-block-content">
-            <h1>
-              Waarom informatica?<br>
-              <small>Informatica is overal!</small>
-            </h1>
-            <hr class="spacer">
-            <div class="row">
-              <div class="col-md-4">
-                <h3>Alles is digitaal</h3>
-                <p>
-                  De wereld om ons heen wordt steeds meer digitaal. Meer dan 80% van de telefoonabonnementen
-                  bevatten een mobiele databundel tegen 2019.
-                </p>
-                <p class="h1">
-                  <i class="fa fa-facebook-square"></i>
-                  <i class="fa fa-google-plus-square"></i>
-                  <i class="fa fa-twitter"></i>
-                </p>
-                <p>Met meer dan 1.000.000.000.000 gebruikers op Facebook,
-                  500.000.000 op Google+ en 200.000.000 op Twitter kun je bijna iedereen vinden op social media.
-                </p>
-                <p class="h1">
-                  <i class="fa fa-youtube-square"></i>
-                  <i class="fa fa-car"></i>
-                  <i class="fa fa-mobile"></i>
-                </p>
-                <p>
-                  Elke minuut wordt er 48 uur aan film geplaatst op Youtube en met inmiddels al meer dan 9 biljoen verbonden
-                  apparaten is het wel duidelijk dat iedereen, inclusief de bedrijven gebruik maken van informatica.
-                </p>
-              </div>
-              <div class="col-md-4">
-                <h3>Praktische insteek</h3>
-                <p class="h1">
-                  <i class="fa fa-flask"></i>
-                </p>
-                <p>
-                  Interactie met technologie vind je overal en op verschillende manieren.
-                  Bij het vak informatica krijg je veel kansen om praktische vaardigheden te verwerken. Heb jij je altijd
-                  al eens afgevraagd hebt hoe je een website of video game kan maken? Gebruik kan maken van verschillende
-                  proffesionele tools zoals PowerPoint of Photoshop? Of ben je gewoon benieuwd hoe je een computerprogramma het beste
-                  kunt programmeren? Als je ja hebt kunnen antwoorden op een van de bovenstaande vragen dan is het vak
-                  informatica mischien wel iets voor jou!
-                </p>
-              </div>
-              <div class="col-md-4">
-                <h3>Informatica is leuk</h3>
-                <p>
-                  Als alle voorgaande punten je nog niet volledig hebben kunnen overhalen dan moet je mischien gewoon
-                  eens stilstaan bij het feit dat informatica leuk is. De meeste vakken waar je uit kunt kiezen in
-                  het voortgezet onderwijs hebben een erg theoretische aanpak, dat betekent veel boeken en schriftelijke
-                  overhoringen.
-                </p>
-                <p>
-                  Zoals al eerder genoemd maken we bij informatica vooral gebruik van praktische opdrachten
-                  waar je lekker in je eigen tempo aan de slag kunt. Daar komt dan ook nog eens bij dat je bijna altijd
-                  gebruik kunt maken van een online methode om je theorie te bestuderen en is er geen sprake van een
-                  centraal schriftelijk eindexamen.
-                </p>
-                <p>
-                  Dan hoef je ook geen boeken mee te nemen en kun je in je laatste jaar het wat rustiger aan doen.
-                  dat is wel zo makkelijk!
-                </p>
-              </div>
+        <div class="color-block-body">
+            <div class="container text-center">
+                <div class="color-block-content">
+                    <h1>
+                        Waarom informatica?<br>
+                        <small>Informatica is overal!</small>
+                    </h1>
+                    <hr class="spacer">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h3>Alles is digitaal</h3>
+
+                            <p>
+                                De wereld om ons heen wordt steeds meer digitaal. Meer dan 80% van de
+                                telefoonabonnementen
+                                bevatten een mobiele databundel tegen 2019.
+                            </p>
+
+                            <p class="h1">
+                                <i class="fa fa-facebook-square"></i>
+                                <i class="fa fa-google-plus-square"></i>
+                                <i class="fa fa-twitter"></i>
+                            </p>
+
+                            <p>Met meer dan 1.000.000.000.000 gebruikers op Facebook,
+                                500.000.000 op Google+ en 200.000.000 op Twitter kun je bijna iedereen vinden op social
+                                media.
+                            </p>
+
+                            <p class="h1">
+                                <i class="fa fa-youtube-square"></i>
+                                <i class="fa fa-car"></i>
+                                <i class="fa fa-mobile"></i>
+                            </p>
+
+                            <p>
+                                Elke minuut wordt er 48 uur aan film geplaatst op Youtube en met inmiddels al meer dan 9
+                                biljoen verbonden
+                                apparaten is het wel duidelijk dat iedereen, inclusief de bedrijven gebruik maken van
+                                informatica.
+                            </p>
+                        </div>
+                        <div class="col-md-4">
+                            <h3>Praktische insteek</h3>
+
+                            <p class="h1">
+                                <i class="fa fa-flask"></i>
+                            </p>
+
+                            <p>
+                                Interactie met technologie vind je overal en op verschillende manieren.
+                                Bij het vak informatica krijg je veel kansen om praktische vaardigheden te verwerken.
+                                Heb jij je altijd
+                                al eens afgevraagd hebt hoe je een website of video game kan maken? Gebruik kan maken
+                                van verschillende
+                                proffesionele tools zoals PowerPoint of Photoshop? Of ben je gewoon benieuwd hoe je een
+                                computerprogramma het beste
+                                kunt programmeren? Als je ja hebt kunnen antwoorden op een van de bovenstaande vragen
+                                dan is het vak
+                                informatica mischien wel iets voor jou!
+                            </p>
+                        </div>
+                        <div class="col-md-4">
+                            <h3>Informatica is leuk</h3>
+
+                            <p>
+                                Als alle voorgaande punten je nog niet volledig hebben kunnen overhalen dan moet je
+                                mischien gewoon
+                                eens stilstaan bij het feit dat informatica leuk is. De meeste vakken waar je uit kunt
+                                kiezen in
+                                het voortgezet onderwijs hebben een erg theoretische aanpak, dat betekent veel boeken en
+                                schriftelijke
+                                overhoringen.
+                            </p>
+
+                            <p>
+                                Zoals al eerder genoemd maken we bij informatica vooral gebruik van praktische
+                                opdrachten
+                                waar je lekker in je eigen tempo aan de slag kunt. Daar komt dan ook nog eens bij dat je
+                                bijna altijd
+                                gebruik kunt maken van een online methode om je theorie te bestuderen en is er geen
+                                sprake van een
+                                centraal schriftelijk eindexamen.
+                            </p>
+
+                            <p>
+                                Dan hoef je ook geen boeken mee te nemen en kun je in je laatste jaar het wat rustiger
+                                aan doen.
+                                dat is wel zo makkelijk!
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
 
     <div id="informatica-op-het-vo" class="color-block color-block-large color-block-light">
-      <div class="color-block-body">
-        <div class="container text-center">
-          <div class="color-block-content">
-            <h1>
-              Informatica op het VO<br>
-              <small>in het kort</small>
-            </h1>
-            <hr class="spacer">
-            <hr class="spacer">
-            <div class="row">
-              <div class="col-md-4">
-                <p class="h1">
-                  <i class="fa fa-flask"></i>
-                </p>
-                <h3>Praktische opdrachten</h3>
-                <p>Minimaal 50% van je uiteindelijke cijfer bestaat uit praktische opdrachten en projecten.</p>
-              </div>
-              <div class="col-md-4">
-                <p class="h1">
-                  <i class="fa fa-group"></i>
-                </p>
-                <h3>Projectwerk</h3>
-                <p>Bij een aantal praktische opdrachten werk je samen met medeleerlingen aan de opdracht.</p>
-              </div>
-              <div class="col-md-4">
-                <p class="h1">
-                  <i class="fa fa-search"></i>
-                </p>
-                <h3>Zelf ontdekken</h3>
-                <p>Leer zelf informatie te zoeken en te begrijpen. De lesstof wordt niet voorgekauwd.</p>
-              </div>
+        <div class="color-block-body">
+            <div class="container text-center">
+                <div class="color-block-content">
+                    <h1>
+                        Informatica op het VO<br>
+                        <small>in het kort</small>
+                    </h1>
+                    <hr class="spacer">
+                    <hr class="spacer">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p class="h1">
+                                <i class="fa fa-flask"></i>
+                            </p>
+
+                            <h3>Praktische opdrachten</h3>
+
+                            <p>Minimaal 50% van je uiteindelijke cijfer bestaat uit praktische opdrachten en
+                                projecten.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="h1">
+                                <i class="fa fa-group"></i>
+                            </p>
+
+                            <h3>Projectwerk</h3>
+
+                            <p>Bij een aantal praktische opdrachten werk je samen met medeleerlingen aan de
+                                opdracht.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="h1">
+                                <i class="fa fa-search"></i>
+                            </p>
+
+                            <h3>Zelf ontdekken</h3>
+
+                            <p>Leer zelf informatie te zoeken en te begrijpen. De lesstof wordt niet voorgekauwd.</p>
+                        </div>
+                    </div>
+                    <hr class="spacer">
+                    <hr class="spacer">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p class="h1">
+                                <i class="fa fa-code"></i>
+                            </p>
+
+                            <h3>Niet alleen programmeren</h3>
+
+                            <p>Informatica bestaat uit veel meer dan code schrijven.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="h1">
+                                <i class="fa fa-check-square-o"></i>
+                            </p>
+
+                            <h3>Keuzemogelijkheden</h3>
+
+                            <p>Kies zelf over welke onderwerpen je meer wilt weten.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="h1">
+                                <i class="fa fa-graduation-cap"></i>
+                            </p>
+
+                            <h3>Geen centraal eindexamen</h3>
+
+                            <p>Informatica kent geen centraal eindexamen.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <hr class="spacer">
-            <hr class="spacer">
-            <div class="row">
-              <div class="col-md-4">
-                <p class="h1">
-                  <i class="fa fa-code"></i>
-                </p>
-                <h3>Niet alleen programmeren</h3>
-                <p>Informatica bestaat uit veel meer dan code schrijven.</p>
-              </div>
-              <div class="col-md-4">
-                <p class="h1">
-                  <i class="fa fa-check-square-o"></i>
-                </p>
-                <h3>Keuzemogelijkheden</h3>
-                <p>Kies zelf over welke onderwerpen je meer wilt weten.</p>
-              </div>
-              <div class="col-md-4">
-                <p class="h1">
-                  <i class="fa fa-graduation-cap"></i>
-                </p>
-                <h3>Geen centraal eindexamen</h3>
-                <p>Informatica kent geen centraal eindexamen.</p>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
 
     <div id="onderwerpen-en-opdrachten" class="color-block color-block-large color-block-success">
-      <div class="color-block-body">
-        <div class="container text-center">
-          <div class="color-block-content">
-            <h2>Onderwerpen &amp; opdrachten</h2>
-          </div>
-          <hr class="spacer">
-          <div class="row text-left">
-            <div class="col-md-4">
-              <div class="panel panel-default">
-                <div class="panel-body">
+        <div class="color-block-body">
+            <div class="container text-center">
+                <div class="color-block-content">
+                    <h2>Onderwerpen &amp; opdrachten</h2>
                 </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-body">
+                <hr class="spacer">
+                <div class="row text-left">
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <img src="static/img/computer_case.jpg" class="img-responsive">
+
+                            <div class="panel-body">
+                                <h3>De computer van binnen</h3>
+                                Computers zijn natuurlijk geweldige apparaten die van alles voor je
+                                kunnen doen. Maar hoe werken ze nu eigenlijk? Bij deze opdracht ga je een computer
+                                ontleden en kun je met je eigen ogen zien hoe alle onderdelen van een computer met
+                                elkaar
+                                verbonden zijn. Dit is niet alleen goed om de werking beter te leren begrijpen, maar je
+                                leert hierdoor
+                                ook hoe je zelf kleine reparaties op je eigen computer kunt uitvoeren.
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <image src="static/img/photoshop.png" class="img-responsive"></image>
+                            <div class="panel-body">
+                                <h3>Photoshop</h3>
+                                Leer gebruik te maken van alle geweldige features van photoshop. Tijdens de les leer je
+                                met behulp
+                                van opdrachten hoe je foto's kunt verbeteren door belichting en kleur aan te passen. Ook
+                                leer je hoe
+                                je eigen creativiteit werkelijkheid te maken met verschillende special effects.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <a>
+                                <video class="img-responsive" id="slide437" autoplay="" muted="" loop="" width="100%"
+                                       height="100%">
+                                    <source src="http://vod.yoyogames.com/vod/yoyo.yoyo/gameplay_slide.mp4">
+                                </video>
+                            </a>
+
+                            <div class="panel-body">
+                                <h3>Maak je eigen Game</h3>
+                                Als jij het leuk vind om games te spelen op de computer of op een console en je daarbij
+                                ook wel eens
+                                afgevraagd hebt of jij ook zo een spel kan maken dan ben je bij Informatica bij het
+                                juiste vak.
+                                Bij Informatica ga jij aan de slag met GameMaker, een handige tool waarmee je snel
+                                eenvoudige games
+                                kunt maken. Als je vervolgens de extra moeite er in steekt kun je de vaardigheden die je
+                                opdoet in de
+                                les ook gebruiken om je game echt proffesioneel te maken!
+
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <img src="static/img/sql_databases.jpg" class="img-responsive">
+
+                            <div class="panel-body">
+                                <h3>SQL Databases</h3>
+                                Tegenwoordig maken we allemaal gebruik van uiterst ingewikkelde applicaties. Vaak is het
+                                zo
+                                dat een applicatie gebruik maakt van grote hoeveelheden informatie. Facebook, Google en
+                                met name
+                                websites waarbij je de mogelijkheid hebt om in te loggen met je eigen gebruikersaccount
+                                maken allemaal
+                                gebruik van deze databses. Bij informatica ga jij hier ook zelf mee aan de slag en leer
+                                je hoe je
+                                informatie kunt opslaan en opvragen door gebruik te maken van de SQL programmeertaal.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <image src="static/img/website.jpg" class="img-responsive"></image>
+                            <div class="panel-body">
+                                <h3>Website Bouwen</h3>
+                                Het internet staat er vol mee; websites. Je kunt ze haast niet meer wegdenken in je
+                                dagelijkse leven. Websites kunnen verschillende rollen dienen maar ze zijn voornamelijk
+                                erg handig om informatie vrij beschikbaar te maken. Bij Informatica zul je zien dat het
+                                maken van een website niet alleen heel makkelijk is, maar ook dat het heel leuk is! Je krijgt
+                                verschillende opdrachten waar je gaat werken aan de bouw van je eigen website. Dat doe je niet
+                                alleen met HTML en PHP maar ook met zogenaamde content management systemen waarbij de essentie
+                                ligt op het uiterlijke ontwerp en niet alleen op de technische kant.
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <image src="static/img/intro_java.png" class="img-responsive"></image>
+                            <div class="panel-body">
+                                <h3>Java Programmeren</h3>
+                                Bij informatica leer je onder andere dat Java meer is dan alleen een soort koffiebonen.
+                                Je gaat aan de slag met een van de meest gebruikte programmeertalen en leert aan de hand
+                                van een opbouw
+                                aan verschillende opdrachten hoe je zelf een programma kunt schrijven. Ook komen
+                                belangrijke concepten
+                                zoals algoritmes en lussen aan de orde. Als je ooit van plan bent een studie te gaan
+                                volgen waar Informatica
+                                in voor komt dan krijg je hier al een goede start.
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-            <div class="col-md-4">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-body">
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-body">
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
 
     <div id="praktische-informatie" class="color-block color-block-large color-block-dark">
-      <div class="color-block-body">
-        <div class="container text-center">
-          <div class="color-block-content">
-            <h1>
-              Praktische informatie
-            </h1>
-            <div class="row">
-              <div class="col-md-6 text-left">
-                <h3>Profielkeuze</h3>
-                <p>Informatica is een keuzevak met <strong>elk profiel</strong>.</p>
-                <p>
-                  De onderwerpen die behandeld worden zijn ook voor iedereen interessant.
-                  Met C&M trekt het werken met Photoshop en het maken van websites en filmpjes je misschien meer,
-                  terwijl een leerling met N&T de hardware-gerelateerde onderwerpen interessanter vindt.
-                </p>
-                <hr>
-                <h3>Examen</h3>
-                <p>
-                  Het vak informatica kent <strong>geen centraal examen</strong>.
-                  Je uiteindelijke cijfer bestaat voor <strong>minimaal 50%</strong> uit <strong>praktische opdrachten en projecten</strong>
-                  en voor maximaal 10% uit theorie.
-                </p>
-              </div>
-              <div class="col-md-6 text-left">
-                <h3>Tijdsbesteding</h3>
-                <p>
-                  <strong>Kernprogramma:</strong>
-                  Het kernprogramma van informatica is voor HAVO en VWO vrijwel gelijk.
-                  In het kernprogramma zitten onderwerpen als <strong>hoe werkt een computer</strong>, <strong>programmeren</strong>,
-                  <strong>maatschappelijke aspecten</strong>, <strong>informatiesystemen</strong> en het maken van <strong>websites</strong>.
-                </p>
-                <p>
-                  <strong>Verdieping:</strong>
-                  In de verdieping is bij zowel HAVO als VWO minimaal &eacute;&eacute;n project waarbij diverse projectvaardigheden aan bod komen.
-                  Ook is er ruimte voor verbreding van de kennis of extra diepgang in de onderwerpen.
-                </p>
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th>&nbsp;</th>
-                      <th class="text-center">HAVO</th>
-                      <th class="text-center">VWO</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th>Kernprogramma</th>
-                      <td class="text-center">200 uur</td>
-                      <td class="text-center">200 uur</td>
-                    </tr>
-                    <tr>
-                      <th>Verdiepingsprogramma</th>
-                      <td class="text-center">120 uur</td>
-                      <td class="text-center">240 uur</td>
-                    </tr>
-                  </tbody>
-                  <tfoot>
-                    <tr>
-                      <th>Totaal</th>
-                      <td class="text-center">320 uur</td>
-                      <td class="text-center">440 uur</td>
-                    </tr>
-                  </tfoot>
-                </table>
-              </div>
+        <div class="color-block-body">
+            <div class="container text-center">
+                <div class="color-block-content">
+                    <h1>
+                        Praktische informatie
+                    </h1>
+
+                    <div class="row">
+                        <div class="col-md-6 text-left">
+                            <h3>Profielkeuze</h3>
+
+                            <p>Informatica is een keuzevak met <strong>elk profiel</strong>.</p>
+
+                            <p>
+                                De onderwerpen die behandeld worden zijn ook voor iedereen interessant.
+                                Met C&M trekt het werken met Photoshop en het maken van websites en filmpjes je
+                                misschien meer,
+                                terwijl een leerling met N&T de hardware-gerelateerde onderwerpen interessanter vindt.
+                            </p>
+                            <hr>
+                            <h3>Examen</h3>
+
+                            <p>
+                                Het vak informatica kent <strong>geen centraal examen</strong>.
+                                Je uiteindelijke cijfer bestaat voor <strong>minimaal 50%</strong> uit <strong>praktische
+                                opdrachten en projecten</strong>
+                                en voor maximaal 10% uit theorie.
+                            </p>
+                        </div>
+                        <div class="col-md-6 text-left">
+                            <h3>Tijdsbesteding</h3>
+
+                            <p>
+                                <strong>Kernprogramma:</strong>
+                                Het kernprogramma van informatica is voor HAVO en VWO vrijwel gelijk.
+                                In het kernprogramma zitten onderwerpen als <strong>hoe werkt een computer</strong>,
+                                <strong>programmeren</strong>,
+                                <strong>maatschappelijke aspecten</strong>, <strong>informatiesystemen</strong> en het
+                                maken van <strong>websites</strong>.
+                            </p>
+
+                            <p>
+                                <strong>Verdieping:</strong>
+                                In de verdieping is bij zowel HAVO als VWO minimaal &eacute;&eacute;n project waarbij
+                                diverse projectvaardigheden aan bod komen.
+                                Ook is er ruimte voor verbreding van de kennis of extra diepgang in de onderwerpen.
+                            </p>
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>&nbsp;</th>
+                                    <th class="text-center">HAVO</th>
+                                    <th class="text-center">VWO</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th>Kernprogramma</th>
+                                    <td class="text-center">200 uur</td>
+                                    <td class="text-center">200 uur</td>
+                                </tr>
+                                <tr>
+                                    <th>Verdiepingsprogramma</th>
+                                    <td class="text-center">120 uur</td>
+                                    <td class="text-center">240 uur</td>
+                                </tr>
+                                </tbody>
+                                <tfoot>
+                                <tr>
+                                    <th>Totaal</th>
+                                    <td class="text-center">320 uur</td>
+                                    <td class="text-center">440 uur</td>
+                                </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
 
     <div id="na-de-middelbare-school" class="color-block color-block-large color-block-warning">
-      <div class="color-block-body">
-        <div class="container text-center">
-          <div class="color-block-content">
-            <h1>Na de middelbare school</h1>
-          </div>
+        <div class="color-block-body">
+            <div class="container text-center">
+                <div class="color-block-content">
+                    <h1>Na de middelbare school</h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
     <div id="credits" class="color-block color-block-large color-block-white">
-      <div class="color-block-body">
-        <div class="container text-center">
-          <div class="color-block-content">
-            <h1>Waarom zou je <span style="text-decoration: underline;">niet</span> voor informatica kiezen?</h1>
-          </div>
+        <div class="color-block-body">
+            <div class="container text-center">
+                <div class="color-block-content">
+                    <h1>Waarom zou je <span style="text-decoration: underline;">niet</span> voor informatica kiezen?
+                    </h1>
+                </div>
+            </div>
         </div>
-      </div>
-      <div style="position: absolute; bottom: 1em; right: 1em; text-align: right;">
-        <p class="text-muted">
-          Opmaak en tekst: &copy; <a href="https://github.com/TheMSB">Martijn Bruning</a> en <a href="https://github.com/jjkester">Jan-Jelle Kester</a><br>
-          Afbeelding: <a href="https://www.flickr.com/photos/chattlibrary/11408257855">&copy; Chattanooga Public Library <small>(CC BY-NC-ND 2.0)</small></a>
-        </p>
-      </div>
+        <div style="position: absolute; bottom: 1em; right: 1em; text-align: right;">
+            <p class="text-muted">
+                Opmaak en tekst: &copy; <a href="https://github.com/TheMSB">Martijn Bruning</a> en <a
+                    href="https://github.com/jjkester">Jan-Jelle Kester</a><br>
+                Afbeelding: <a href="https://www.flickr.com/photos/chattlibrary/11408257855">&copy; Chattanooga Public
+                Library
+                <small>(CC BY-NC-ND 2.0)</small>
+            </a>
+            </p>
+        </div>
     </div>
-  </div>
+</div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="static/js/bootstrap.min.js"></script>
-  <script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script>
     $(function() {
       var slides = $('.content-wrapper').children('.color-block-large').toArray(); // The slides in the page
       var codesUp = [33, 38]; // The keys for navigating to previous slides
@@ -563,6 +707,7 @@
         }
       });
     });
-  </script>
+
+</script>
 </body>
 </html>
