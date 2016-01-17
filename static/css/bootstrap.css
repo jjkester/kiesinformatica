@@ -6848,11 +6848,15 @@ button.close {
 .visible-presentation {
   display: none;
 }
-.presentation .visible-presentation {
-  display: block;
+@media (min-width: 992px) {
+  .presentation .visible-presentation {
+    display: block;
+  }
 }
-.presentation .hidden-presentation {
-  display: none;
+@media (min-width: 992px) {
+  .presentation .hidden-presentation {
+    display: none;
+  }
 }
 .navbar-icon-label {
   display: inline;

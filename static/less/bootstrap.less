@@ -187,13 +187,17 @@
 
 .visible-presentation {
   display: none;
-  .presentation & {
-    display: block;
+  @media (min-width: @grid-float-breakpoint) {
+    .presentation & {
+      display: block;
+    }
   }
 }
 .hidden-presentation {
-  .presentation & {
-    display: none;
+  @media (min-width: @grid-float-breakpoint) {
+    .presentation & {
+      display: none;
+    }
   }
 }
 
