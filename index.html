@@ -502,6 +502,25 @@
     </div>
   </div>
 
+  <div id="presentation-mode-intro" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Presentatiemodus</h4>
+        </div>
+        <div class="modal-body">
+          <p>De presentatiemodus is nu ingeschakeld.</p>
+          <p>In deze modus is de inhoud verkort om leesbaar te zijn vanaf een grotere afstand.</p>
+          <p>Navigeren in deze modus kan door het gebruik van de pijltjestoetsen en <kbd>Page Up</kbd> en <kbd>Page Down</kbd>. Dit werkt goed met de meeste <em>presenters</em>.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Beginnen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="static/js/bootstrap.min.js"></script>
   <script>
@@ -596,6 +615,7 @@
         } else {
           $('body').addClass('presentation');
           $(this).addClass('active');
+          $('#presentation-mode-intro').modal('show');
         }
       });
     });
