@@ -641,7 +641,7 @@
                 <div class="item media">
                   <div class="media-left media-middle">
                     <a href="#">
-                      <img class="media-object" src="static/img/software_architect.jpg" alt="software architect" alt="informatica">
+                      <img class="media-object" src="static/img/software_architect.jpg" alt="software architect">
                     </a>
                   </div>
                     <div class="media-body media-middle">
@@ -923,10 +923,13 @@
 
       // Scroll to anchors
       $('a[href^="#"]').click(function (event) {
-        event.preventDefault();
+        var target = $($(this).attr('href'));
+        if (target.length && (target.hasClass('color-block-large') || target.hasData('slide'))) {
+          event.preventDefault();
 
-        // Scroll
-        scrollTo($($(this).attr('href')), true);
+          // Scroll
+          scrollTo(target, true);
+        }
       });
 
       // Handle local history changes with scrolling
