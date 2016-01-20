@@ -6883,3 +6883,18 @@ a {
   line-height: 1.75;
   opacity: 0.8;
 }
+.list-presentation li {
+  padding-top: .66em;
+  padding-bottom: .66em;
+}
+.list-presentation li i.fa {
+  display: block;
+  float: left;
+  padding-right: .33em;
+}
+.list-presentation.list-presentation-bordered li {
+  border-bottom: 1px solid;
+}
+.list-presentation.list-presentation-bordered li:last-of-type {
+  border-bottom: 0;
+}
