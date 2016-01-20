@@ -6873,3 +6873,13 @@ button,
 a {
   transition: .5s;
 }
+.text-presentation {
+  font-size: 18px;
+  line-height: 1.75;
+  opacity: 0.8;
+}
+.list-presentation {
+  font-size: 18px;
+  line-height: 1.75;
+  opacity: 0.8;
+}
