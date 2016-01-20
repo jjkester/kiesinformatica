@@ -225,4 +225,21 @@ button, a {
 }
 .list-presentation {
   .text-presentation;
+  li {
+    padding-top: .66em;
+    padding-bottom: .66em;
+
+    i.fa {
+      display: block;
+      float: left;
+      padding-right: .33em;
+    }
+  }
+  &.list-presentation-bordered li {
+    border-bottom: 1px solid;
+
+    &:last-of-type {
+      border-bottom: 0;
+    }
+  }
 }
