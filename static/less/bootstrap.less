@@ -187,14 +187,35 @@
 
 .visible-presentation {
   display: none;
-  .presentation & {
-    display: block;
+  @media (min-width: @grid-float-breakpoint) {
+    .presentation & {
+      display: block;
+    }
   }
 }
 .hidden-presentation {
-  .presentation & {
-    display: none;
+  @media (min-width: @grid-float-breakpoint) {
+    .presentation & {
+      display: none;
+    }
   }
+}
+
+.navbar-icon {}
+.navbar-icon-label {
+  display: inline;
+
+  @media (min-width: @grid-float-breakpoint) {
+    display: none;
+
+    .navbar-nav > li.active > a & {
+      display: inline;
+    }
+  }
+}
+
+button, a {
+  transition: .5s;
 }
 
 .text-presentation {

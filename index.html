@@ -38,52 +38,88 @@
         </div>
       </div>
       <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav navbar-left">
           <li data-toggle="tooltip" data-placement="bottom" title="Terug naar het begin">
             <a href="#home">
-              <i class="fa fa-fw fa-home"></i>
+              <i class="fa fa-fw fa-home navbar-icon"></i>
+              <span class="navbar-icon-label">
+                Home
+              </span>
             </a>
           </li>
           <li data-toggle="tooltip" data-placement="bottom" title="Video: Wat de meeste scholen niet geven">
             <a href="#film">
-              <i class="fa fa-fw fa-film"></i>
+              <i class="fa fa-fw fa-film navbar-icon"></i>
+              <span class="navbar-icon-label">
+                Video
+              </span>
             </a>
           </li>
-          <li>
+          <li data-toggle="tooltip" data-placement="bottom" title="Wat is informatica?">
             <a href="#informatica-is">
-              Informatica is...
+              <i class="fa fa-fw fa-star navbar-icon"></i>
+              <span class="navbar-icon-label">
+                Informatica
+              </span>
             </a>
           </li>
           <li>
+          <li data-toggle="tooltip" data-placement="bottom" title="Waarom informatica?">
             <a href="#waarom-informatica">
-              Waarom?
+              <i class="fa fa-fw fa-question navbar-icon"></i>
+              <span class="navbar-icon-label">
+                Waarom kiezen
+              </span>
             </a>
           </li>
-          <li>
+          <li data-toggle="tooltip" data-placement="bottom" title="Informatica op het VO">
             <a href="#informatica-op-het-vo">
-              Vakinformatie
+              <i class="fa fa-fw fa-info navbar-icon"></i>
+              <span class="navbar-icon-label">
+                Voortgezet Onderwijs
+              </span>
             </a>
           </li>
-          <li>
+          <li data-toggle="tooltip" data-placement="bottom" title="Onderwerpen &amp; opdrachten">
             <a href="#onderwerpen-en-opdrachten">
-              Vakinhoud
+              <i class="fa fa-fw fa-search-plus navbar-icon"></i>
+              <span class="navbar-icon-label">
+                Vakinhoud
+              </span>
             </a>
           </li>
-          <li>
+          <li data-toggle="tooltip" data-placement="bottom" title="Praktische informatie">
             <a href="#praktische-informatie">
-              Praktische informatie
+              <i class="fa fa-fw fa-file-text-o navbar-icon"></i>
+              <span class="navbar-icon-label">
+                Praktische info
+              </span>
             </a>
           </li>
-          <li>
+          <li data-toggle="tooltip" data-placement="bottom" title="Na de middelbare school">
             <a href="#na-de-middelbare-school">
-              Vervolg
+              <i class="fa fa-fw fa-university navbar-icon"></i>
+              <span class="navbar-icon-label">
+                Na het VO
+              </span>
+            </a>
+          </li>
+          <li data-toggle="tooltip" data-placement="bottom" title="Verder naar het einde">
+            <a href="#einde">
+              <i class="fa fa-fw fa-check navbar-icon"></i>
+              <span class="navbar-icon-label">
+                Afsluiting
+              </span>
             </a>
           </li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right hidden-xs hidden-sm">
           <li>
-            <button class="btn btn-default navbar-btn presentation-toggle">
-              <i class="fa fa-film"></i>
+            <button class="btn btn-default navbar-btn presentation-toggle" data-toggle="tooltip" data-placement="bottom" title="Schakel presentatiemodus">
+              <i class="fa fa-television"></i>
+              <span class="hidden-md">
+                Presentatiemodus
+              </span>
             </button>
           </li>
         </ul>
@@ -536,7 +572,7 @@
       </div>
     </div>
 
-    <div id="credits" class="color-block color-block-large color-block-white">
+    <div id="einde" class="color-block color-block-large color-block-white">
       <div class="color-block-body">
         <div class="container text-center">
           <div class="color-block-content">
@@ -549,6 +585,25 @@
           Opmaak en tekst: &copy; <a href="https://github.com/TheMSB">Martijn Bruning</a> en <a href="https://github.com/jjkester">Jan-Jelle Kester</a><br>
           Afbeelding: <a href="https://www.flickr.com/photos/chattlibrary/11408257855">&copy; Chattanooga Public Library <small>(CC BY-NC-ND 2.0)</small></a>
         </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="presentation-mode-intro" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Presentatiemodus</h4>
+        </div>
+        <div class="modal-body">
+          <p>De presentatiemodus is nu ingeschakeld.</p>
+          <p>In deze modus is de inhoud verkort om leesbaar te zijn vanaf een grotere afstand.</p>
+          <p>Navigeren in deze modus kan door het gebruik van de pijltjestoetsen en <kbd>Page Up</kbd> en <kbd>Page Down</kbd>. Dit werkt goed met de meeste <em>presenters</em>.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Beginnen</button>
+        </div>
       </div>
     </div>
   </div>
@@ -647,6 +702,7 @@
         } else {
           $('body').addClass('presentation');
           $(this).addClass('active');
+          $('#presentation-mode-intro').modal('show');
         }
       });
     });
