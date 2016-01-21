@@ -624,7 +624,7 @@
                     </a>
                   </div>
                   <div class="media-body media-middle">
-                    <h3 class="media-heading">Studiekeuze: TECHNISCHE INFORMATICA</h3>
+                    <h3 class="media-heading">Studiekeuze: Technische Informatica</h3>
                     <p class="text-left">Technische Informatica is een uitdagende wetenschap die
                       zich richt op
                       informatie en systemen. Denk bij informatie bijvoorbeeld aan het
@@ -641,11 +641,11 @@
                 <div class="item media">
                   <div class="media-left media-middle">
                     <a href="#">
-                      <img class="media-object" src="static/img/software_architect.jpg" alt="software architect" alt="informatica">
+                      <img class="media-object" src="static/img/software_architect.jpg" alt="software architect">
                     </a>
                   </div>
                     <div class="media-body media-middle">
-                      <h3 class="media-heading">Beroepskeuze: Software-engineer of softwarearchitect</h3>
+                      <h3 class="media-heading">Beroepskeuze: Software-engineer of Softwarearchitect</h3>
                       <p class="text-left">Veel afgestudeerde informaticastudenten die interesse hebben in het
                         bedrijfsleven, starten als software-engineer.
                       </p>
@@ -666,7 +666,7 @@
                     </a>
                   </div>
                   <div class="media-body media-middle">
-                    <h3 class="media-heading">Studiekeuze: BUSINESS & IT</h3>
+                    <h3 class="media-heading">Studiekeuze: Business & IT</h3>
                     <p class="text-left">Voor bedrijven is informatietechnologie van levensbelang.
                       Maar informatietechnologie is meer dan het plaatsen van een computer en een
                       softwareprogramma: de medewerkers moeten er ook mee kunnen werken. Bij
@@ -684,7 +684,7 @@
                     </a>
                   </div>
                   <div class="media-body media-middle">
-                    <h3 class="media-heading">Studiekeuze: GAMEDESIGN</h3>
+                    <h3 class="media-heading">Studiekeuze: Game Design</h3>
                     <p class="text-left">De vierjarige studie Game Design bestaat uit twee delen van twee jaar. Tijdens
                       de eerste twee jaar verbreed je je algemene kennis en kunde over game design met vakken als Action
                       Design Principles, Interactive Development en Playability.
@@ -709,7 +709,7 @@
                     </a>
                   </div>
                   <div class="media-body media-middle">
-                    <h3 class="media-heading">Studiekeuze: CREATIVE TECHNOLOGY</h3>
+                    <h3 class="media-heading">Studiekeuze: Creative Technology</h3>
                     <p class="text-left">Creative Technology daagt je uit om met de nieuwste technologie interactieve
                       toepassingen te ontwikkelen die het leven van de gebruiker gezonder, gemakkelijker en leuker maken.
                       Je leert hoe je met slimme informatie- en communicatietechnologie, nieuwe media (zoals mediatechnologie,
@@ -729,7 +729,7 @@
                     </a>
                   </div>
                   <div class="media-body media-middle">
-                    <h3 class="media-heading">Studiekeuze: ELECTRICAL ENGINEERING / ELEKTROTECHNIEK</h3>
+                    <h3 class="media-heading">Studiekeuze: Electrical Engineering / Elektrotechniek</h3>
                     <p class="text-left">Bij de bacheloropleiding Electrical Engineering ontwikkel je kennis en
                       vaardigheden die onmisbaar zijn op vrijwel alle technologische terreinen (elektronica, dataopslag,
                       communicatie, antennes, gebruikersinterfaces, energieopslag, sensoren, besturing,
@@ -774,7 +774,7 @@
                     </a>
                   </div>
                   <div class="media-body media-middle">
-                    <h3 class="media-heading">Studiekeuze: TECHNISCHE WISKUNDE</h3>
+                    <h3 class="media-heading">Studiekeuze: Technische Wiskunde</h3>
                     <p class="text-left">In de bacheloropleiding Technische Wiskunde leer je hoe je gebruikmaakt van
                       wiskundige instrumenten in de techniek, de medische wereld, het bank- en verzekeringswezen, het
                       milieu en het verkeer. Door praktijkproblemen te vereenvoudigen en er een wiskundig model voor te
@@ -923,10 +923,13 @@
 
       // Scroll to anchors
       $('a[href^="#"]').click(function (event) {
-        event.preventDefault();
+        var target = $($(this).attr('href'));
+        if (target.length && (target.hasClass('color-block-large') || target.hasData('slide'))) {
+          event.preventDefault();
 
-        // Scroll
-        scrollTo($($(this).attr('href')), true);
+          // Scroll
+          scrollTo(target, true);
+        }
       });
 
       // Handle local history changes with scrolling
